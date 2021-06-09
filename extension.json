@@ -1,0 +1,40 @@
+{
+    "identifier": "org.RunonSave",
+    "name": "Run on Save",
+    "organization": "MyOrganization",
+    "description": "Lorem ipsum, dolor sit amet.",
+    "version": "1.0",
+    "categories": ["commands"],
+    
+    "main": "main.js",
+    
+    "activationEvents": [
+        "onLanguage:html"
+    ],
+    
+    "entitlements": {
+        "filesystem": "readwrite"
+    },
+    
+    "commands": {
+        "extensions": [
+            {
+                "title": "Open URL",
+                "command": "run-on-save.openURL"
+            },
+            {
+                "title": "Run External Tool",
+                "command": "run-on-save.runExternalTool"
+            }
+        ]
+    },
+    
+    "config": [
+        {
+            "key": "run-on-save.foobar",
+            "title": "Foo the bar",
+            "type": "boolean",
+            "default": false
+        }
+    ]
+}
